@@ -5,6 +5,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: "Add Empty PATH element"
+        run: |
+          echo >> $GITHUB_PATH
       - name: "Append to $GITHUB_PATH"
         run: |
           echo "$HOME/someFolder" >> $GITHUB_PATH
